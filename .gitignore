@@ -1,0 +1,4 @@
+*.exe
+test.c
+template.c
+.vscode/
