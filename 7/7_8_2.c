@@ -18,8 +18,8 @@ void output(double *x, double *y, double *m, int N){
 }
 
 void input(double *x, double *y, double *m, int N){
-    printf("Ç¢•§®‚• ‚ÆÁ™® Ø‡®¨•‡: \
-(1, 2, 3) - £§• 1, 2 (™ÆÆ‡§®≠†‚Î), 3 (¨†··†)\n");
+    printf("–í–≤–µ–¥–∏—Ç–µ —Ç–æ—á–∫–∏ –ø—Ä–∏–º–µ—Ä: \
+(1, 2, 3) - –≥–¥–µ 1, 2 (–∫–æ–æ—Ä–¥–∏–Ω–∞—Ç—ã), 3 (–º–∞—Å—Å–∞)\n");
     for(int i = 0; i < N; i++){
         scanf(" ( %lf , %lf , %lf )", (x + i), (y + i), (m + i));
     }
@@ -53,7 +53,7 @@ struct point center(double *x, double *y, double *m, int N){
 }
 
 void print_center(double *x, double *y, double *m, int N){
-    printf("ñ•≠‚‡ ‚Ô¶•·‚® - (%.2lf, %.2lf)\n", x_center(x, m, N), y_center(y, m, N));
+    printf("–¶–µ–Ω—Ç—Ä —Ç—è–∂–µ—Å—Ç–∏ - (%.2lf, %.2lf)\n", x_center(x, m, N), y_center(y, m, N));
 }
 
 struct point nearest(double *x, double *y, double *m, int N, struct point c){
@@ -92,7 +92,7 @@ int main(){
 
     int N;
 
-    printf("Ç¢•§®‚• ™Æ´®Á•·‚¢Æ Ì´•¨•≠‚Æ¢ ¢ ¨†··®¢• (¨†™·. 100):\n");
+    printf("–í–≤–µ–¥–∏—Ç–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —ç–ª–µ–º–µ–Ω—Ç–æ–≤ –≤ –º–∞—Å—Å–∏–≤–µ (–º–∞–∫—Å. 100):\n");
     scanf("%d", &N);
 
     input(x, y, m, N);
@@ -101,7 +101,7 @@ int main(){
     print_center(x, y, m, N);
     struct point c = center(x, y, m, N);
     struct point p = nearest(x, y, m, N, c);
-    printf("Å´®¶†©Ë†Ô ‚ÆÁ™† - (%.2lf, %.2lf)\n", p.x, p.y);
+    printf("–ë–ª–∏–∂–∞–π—à–∞—è —Ç–æ—á–∫–∞ - (%.2lf, %.2lf)\n", p.x, p.y);
     delete(x, y, m, &N, p.n);
     output(x, y, m, N);
 
