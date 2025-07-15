@@ -14,7 +14,6 @@ void output(double *x, double *y, double *m, int N){
     for(int i = 0; i < N; i++){
         printf("(%.2lf, %.2lf, %.2lf)\n", *(x + i), *(y + i), *(m + i));
     }
-    
 }
 
 void input(double *x, double *y, double *m, int N){
