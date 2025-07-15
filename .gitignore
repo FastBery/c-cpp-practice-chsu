@@ -1,4 +1,5 @@
+exes
 *.exe
 test.c
 template.c
-.vscode/
+.vscode
