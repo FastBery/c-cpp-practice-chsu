@@ -3,3 +3,4 @@ exes
 test.c
 template.c
 .vscode
+.gitignore
