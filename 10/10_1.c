@@ -19,7 +19,13 @@ char *numbers(char *str){
 
 int main(){
     char str[L];
-    scanf("%s", &str);
+    int i = 0;
+    char *ptr = str, ch;
+
+    while( (ch = getchar()) != '\n' && ch != EOF && i < L - 1)
+        ptr[i++] = ch;
+    ptr[i] = '\0';
+
     printf("%d\n", strlen(numbers(str)));
     printf("%s\n", numbers(str));
     return 0;
