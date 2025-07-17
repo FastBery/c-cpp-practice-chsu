@@ -26,6 +26,19 @@ void table(int m[][2]){
         printf("\n");
     }
 }
+
+double max_distance(int m[][2]){
+    double max = 0;
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < N; j++){
+            if(max < length(m[i], m[j])){
+                max = length(m[i], m[j]);
+            }
+        }
+    }
+    return max;
+}
+
 //1 5 2 5 8 3 8 5 1 5 2 3 6 9 3 2 9 9 1 4
 int main(){
     int points[N][2];
@@ -36,5 +49,9 @@ int main(){
     printf("\n");
     printf("\n");
     table(points);
+
+    printf("\n");
+    printf("\n");
+    printf("%lf", max_distance(points));
     return 0;
 }
