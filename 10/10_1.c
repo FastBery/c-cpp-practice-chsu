@@ -17,7 +17,7 @@ char *numbers(char *str){
     return new_str;
 }
 
-void *input_str(char *f){
+void input_str(char *f){
     char *ptr = f, ch;
     int i = 0;
     while( (ch = getchar()) != '\n' && ch != EOF && i < L - 1)
@@ -29,10 +29,6 @@ int main(){
     char str[L];
     int i = 0;
     char *ptr = str, ch;
-
-    // while( (ch = getchar()) != '\n' && ch != EOF && i < L - 1)
-    //     ptr[i++] = ch;
-    // ptr[i] = '\0';
 
     input_str(str);
     printf("%d\n", strlen(numbers(str)));

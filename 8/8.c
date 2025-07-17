@@ -9,9 +9,10 @@ int min_id = 0;
 float max(float *x){
     float max = 0;
     for(int i = 0; i < HOURS; i++){
-        if(x[i] > max)
+        if(x[i] > max){
             max = x[i];
             max_id = i;
+        }
     }
     return max;
 }
@@ -19,9 +20,10 @@ float max(float *x){
 float min(float *x){
     float min = 99;
     for(int i = 0; i < HOURS; i++){
-        if(x[i] < min)
+        if(x[i] < min){
             min = x[i];
             min_id = i;
+        }
     }
     return min;
 }
@@ -32,8 +34,11 @@ int main(){
 
     for(int i = 0; i < HOURS; i++){
         volts[i] = rand() % 100;
+        printf("%.2f\n", volts[i]);
     }
-    printf("Максимальное напряжение: %f, id: %d\n", max(volts), max_id);
-    printf("Минимальное напряжение: %f, id: %d\n", min(volts), min_id);
+    float maximum = max(volts);
+    float minimum = min(volts);
+    printf("Максимальное напряжение: %f, id: %d\n", maximum, max_id);
+    printf("Минимальное напряжение: %f, id: %d\n", minimum, min_id);
     return 0;
 }

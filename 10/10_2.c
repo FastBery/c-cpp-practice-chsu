@@ -13,7 +13,7 @@ void delete(char *str){
     }
 }
 
-void *input_str(char *f){
+void input_str(char *f){
     char *ptr = f, ch;
     int i = 0;
     while( (ch = getchar()) != '\n' && ch != EOF && i < TOTAL - 1)
@@ -29,19 +29,22 @@ int main(){
     char file_name_input[TOTAL];
     printf("%s\n", "Введите имя файла для чтения:");
     input_str(file_name_input);
+    f1 = fopen(file_name_input, "r");
+    if(f1 == NULL){
+        printf("Файла не существует\n");
+        return 0;
+    }
 
     char file_name_output[TOTAL];
     printf("%s\n", "Введите имя файла для вывода:");
     input_str(file_name_output);
-
-    f1 = fopen(file_name_input, "r");
     f2 = fopen(file_name_output, "w");
 
     while(fgets(buffer, TOTAL, f1)){
         delete(buffer);
-        fprintf(f2, buffer);
-        
-    }    
+        fprintf(f2, buffer); 
+    }  
+      
     fclose(f1);
     fclose(f2);
     // printf("%s", buffer);
